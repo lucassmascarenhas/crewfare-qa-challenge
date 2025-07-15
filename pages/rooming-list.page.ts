@@ -66,11 +66,11 @@ class CarouselComponent {
   }
 
   async clickPrevious(): Promise<void> {
-    this.previousButton.click();
+    await this.previousButton.click();
   }
 
   async clickNext(): Promise<void> {
-    this.nextButton.click();
+    await this.nextButton.click();
   }
 }
 
@@ -97,6 +97,10 @@ export class RoomingListPage {
 
   async clickSearch(): Promise<void> {
     await this.searchInput.click();
+  }
+
+  async getSearchText(): Promise<string | null> {
+    return this.searchInput.inputValue();
   }
 
   async searchFor(text: string): Promise<void> {
@@ -126,7 +130,4 @@ export class RoomingListPage {
   async getCarouselCount(): Promise<number> {
     return this.eventCarouselsList.count();
   }
-
-  // Handle card components
-
 }
