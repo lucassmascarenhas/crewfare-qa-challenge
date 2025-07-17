@@ -19,7 +19,7 @@ cd crewfare-qa-challenge
 npm install
 ```
 
-3. Set up .env file
+3. Set up .env file (fill BASE_URL)
 
 4. Run tests:
 
